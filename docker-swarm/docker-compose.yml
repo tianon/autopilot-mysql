@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+
+    mysql:
+        extends:
+            file: ../common-compose.yml
+            service: mysql
+
+    consul:
+        extends:
+            file: ../common-compose.yml
+            service: consul

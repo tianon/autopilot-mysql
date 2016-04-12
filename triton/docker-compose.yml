@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+
+    mysql:
+        extends:
+            file: ../common-compose.yml
+            service: mysql
+        network_mode: bridge
+        links:
+            - consul:consul
+
+    consul:
+        extends:
+            file: ../common-compose.yml
+            service: consul
+        network_mode: bridge
